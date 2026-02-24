@@ -1,0 +1,156 @@
+/* Luxury Minimalist Footer */
+.footer {
+    background-color: #111;
+    /* Deep Black/Dark Grey */
+    color: #f1f1f1;
+    padding: 4rem 2rem 2rem;
+    /* Reduced side padding, using container for alignment */
+    margin-top: auto;
+    border-top: 1px solid #222;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    /* Brand gets more space */
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    max-width: 1400px;
+    /* Constrain width for better alignment */
+    margin: 0 auto;
+    /* Center the grid */
+    width: 100%;
+}
+
+/* Brand Section */
+.footer-logo {
+    font-family: 'Cinzel', serif;
+    /* Or system serif */
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, #bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-description {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    max-width: 300px;
+}
+
+/* Headings */
+.footer-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Links List */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--accent-primary, #c5a059);
+    padding-left: 5px;
+    /* Subtle slide effect */
+}
+
+/* Contact List */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.contact-icon {
+    color: var(--accent-primary, #c5a059);
+}
+
+/* Socials */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #222;
+    /* Subtle circle bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--accent-primary, #c5a059);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    padding-top: 2rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 3rem 2rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        /* Stack vertically on mobile */
+        text-align: center;
+    }
+
+    .footer-description {
+        margin: 0 auto 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+    }
+}

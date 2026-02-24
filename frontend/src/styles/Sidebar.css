@@ -1,0 +1,86 @@
+/* Sidebar.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    z-index: 1000;
+    box-shadow: none;
+    background-color: white;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #fff;
+    background: var(--gradient-hero);
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(30, 42, 74, 0.3);
+    transform: scale(1.1);
+}
+
+.nav-item:hover svg,
+.nav-item.active svg {
+    color: #fff;
+}
+
+.nav-item svg {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Tooltip Label */
+.nav-label {
+    position: absolute;
+    left: 70px;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+/* Show label on hover */
+.nav-item:hover .nav-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}

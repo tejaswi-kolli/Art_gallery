@@ -1,0 +1,267 @@
+:root {
+  /* ArtHub Gallery Theme - Navy to Mauve Gradient */
+
+  /* Background Colors */
+  --bg-primary: #F8F7FA;
+  --bg-secondary: #F0EFF4;
+  --bg-tertiary: #E8E6EE;
+  --bg-dark: #1E2A4A;
+
+  /* Gradient Colors */
+  --gradient-start: #1E2A4A;
+  --gradient-mid: #4A3B5C;
+  --gradient-end: #6B3A5C;
+  --gradient-hero: linear-gradient(135deg, #1E2A4A 0%, #4A3B5C 50%, #6B3A5C 100%);
+
+  /* Text Colors */
+  --text-primary: #1E2A4A;
+  --text-secondary: #4A4860;
+  --text-muted: #7A7890;
+  --text-light: #F8F7FA;
+
+  /* Sidebar */
+  --sidebar-bg: #F8F7FA;
+  --sidebar-text: #1E2A4A;
+  --sidebar-hover: #6B3A5C;
+
+  /* Brand Colors - Navy to Mauve */
+  --accent-primary: #4A3B5C;
+  --accent-secondary: #1E2A4A;
+  --accent-tertiary: #6B3A5C;
+
+  --accent-light: #8A6B7C;
+  --accent-lighter: #B8A0AC;
+
+  --accent-glow: rgba(74, 59, 92, 0.15);
+
+  /* Accent Rose/Mauve */
+  --gold-primary: #6B3A5C;
+  --gold-light: #9B6A8C;
+  --gold-dark: #4A3B5C;
+
+  /* Border Colors */
+  --border-light: #E0DEE8;
+  --border-medium: #C8C5D5;
+  --border-dark: #4A4860;
+
+  /* Typography */
+  --font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+
+  /* Refined Shadows */
+  --shadow-sm: 0 2px 8px rgba(30, 42, 74, 0.06);
+  --shadow-md: 0 4px 16px rgba(30, 42, 74, 0.10);
+  --shadow-lg: 0 8px 32px rgba(30, 42, 74, 0.14);
+  --shadow-xl: 0 16px 48px rgba(30, 42, 74, 0.18);
+
+  --transition-speed: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(180deg, #F0EEF5 0%, #E8E5EE 50%, #F5F3F8 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed);
+}
+
+ul {
+  list-style: none;
+}
+
+/* App Layout Structure */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  /* Updated to match Sidebar width */
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 100px);
+}
+
+/* Sidebar expansion handling - optional if we want pushes */
+/* .sidebar:hover ~ .main-wrapper {
+    margin-left: 240px; 
+} */
+
+.main-content {
+  flex: 1;
+  padding: 100px 40px 40px;
+  /* Top padding clears TopBar (80px) + gap */
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Button & Common Utilities */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1E2A4A;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all var(--transition-speed) ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--text-secondary);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-outline:hover {
+  background: var(--accent-primary);
+  color: #fff;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background: #fcfcfc;
+  border-bottom: 2px solid #eaeaea;
+  border-radius: 8px 8px 0 0;
+  /* Top rounded only */
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  background: #fff;
+  border-bottom-color: var(--accent-primary);
+  box-shadow: 0 4px 12px rgba(74, 15, 51, 0.1);
+  outline: none;
+}
+
+/* Password Toggle Wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 50px;
+  /* Space for eye icon */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 15px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1.2rem;
+}
+
+.password-toggle-icon:hover {
+  color: var(--accent-primary);
+}
+
+/* Card Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Anchor Positioning handled in Home.css via scroll-margin-top */
+.scroll-target {
+  scroll-margin-top: 100px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

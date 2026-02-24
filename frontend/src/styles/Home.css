@@ -1,0 +1,464 @@
+/* ===== HOME PAGE ELEGANT THEME ===== */
+.home-page {
+    background: var(--bg-secondary);
+    min-height: 100vh;
+}
+
+/* Main Layout for Sidebar + Content */
+.main-layout {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    background: #FAFAFA;
+}
+
+.filters-sidebar {
+    width: 250px;
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+    flex-shrink: 0;
+    border: 1px solid var(--border-light);
+}
+
+.filters-sidebar h3 {
+    color: #913E4D;
+}
+
+.filters-sidebar label {
+    color: #333;
+}
+
+.filters-sidebar input,
+.filters-sidebar select {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.filters-sidebar input::placeholder {
+    color: #999;
+}
+
+.content-area {
+    flex: 1;
+}
+
+.filter-toggle-btn {
+    margin-top: 1rem;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.filter-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.price-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.apply-btn {
+    width: 100%;
+}
+
+/* ===== PREMIUM COLLECTION SECTIONS ===== */
+.collection-section {
+    padding: 4rem 0;
+    position: relative;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F6F3 100%);
+}
+
+.collection-section:nth-child(even) {
+    background: linear-gradient(180deg, #F8F6F3 0%, #FFFFFF 100%);
+}
+
+.section-header {
+    padding: 0 50px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.title-text {
+    position: relative;
+}
+
+.title-underline {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #913E4D, #D4AF37);
+    margin-top: 10px;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.section-header:hover .title-underline {
+    width: 100px;
+}
+
+.scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Legacy support */
+.suggestions-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.suggestions-section h3 {
+    margin-bottom: 1.5rem;
+    color: var(--accent-primary);
+}
+
+/* HERO SECTION - Standard Card Style */
+.hero-section {
+    background: var(--accent-secondary);
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+    /* Wine Gradient */
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 30px auto 60px;
+    max-width: 1100px;
+    color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    outline: none;
+    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar button {
+    background: #fff;
+    color: var(--accent-primary);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+    box-shadow: var(--shadow-md);
+}
+
+.search-bar button:hover {
+    transform: scale(1.1);
+    background: #f0f0f0;
+}
+
+/* SECTION TITLES */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: var(--accent-primary);
+}
+
+/* ARTWORK GRID */
+.artwork-grid,
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow-lg);
+}
+
+.newsletter h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+/* HORIZONTAL SCROLL / MARQUEE - Restored for "Sliding Row" */
+.marquee-container {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    padding-left: 20px;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.scroll-item {
+    flex: 0 0 280px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* EXPLORE BUTTON */
+.explore-btn {
+    background: transparent;
+    border: 2px solid var(--accent-primary);
+    color: var(--accent-primary);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: var(--accent-primary);
+    color: white;
+}
+
+/* Scroll Offset Fix for Sidebar Navigation
+ * Handled via JS in Sidebar.js now for better cross-browser control
+ */
+#about,
+#featured-collection {
+    scroll-margin-top: 100px;
+}
+
+/* Horizontal Scroll Container for Featured Collection */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 5px;
+    /* Padding for shadow/hover effects */
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-card-item {
+    flex: 0 0 300px;
+    /* Fixed width for cards */
+}
+
+/* Scroll Arrows */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+    /* Increased z-index */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.scroll-arrow:hover {
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-arrow.left {
+    left: 10px;
+}
+
+.scroll-arrow.right {
+    right: 10px;
+}
+
+/* --- Marquee Animation --- */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    /* Adjust speed as needed: 40s is slow and smooth */
+    animation: marquee 80s linear infinite;
+}
+
+/* Pause on hover REMOVED as per user request */
+/* .marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+} */
+
+/* Ensure items maintain fixed width */
+.marquee-track .scroll-card-item {
+    flex: 0 0 300px;
+}

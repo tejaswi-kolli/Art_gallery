@@ -1,0 +1,150 @@
+/* Global Styles & Variables */
+:root {
+  /* Artistic & Minimal Palette */
+  --bg-color: #f9fafb;
+  /* Very light cool gray/off-white */
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+  /* Charcoal, not black */
+  --text-light: #6b7280;
+
+  --primary-color: #4f46e5;
+  /* Deep Indigo - Professional yet artistic */
+  --primary-hover: #4338ca;
+  --accent-color: #ec4899;
+  /* Pink/Rose for artistic splashes */
+
+  --border-color: #e5e7eb;
+  --input-bg: #f3f4f6;
+
+  --transition-speed: 0.3s;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Clean modern font */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Global Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Global Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary-color), #818cf8);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  /* Pillow shape for modern feel */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+  opacity: 0.95;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 22px;
+  /* Compensate for border */
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: #ef4444;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  /* White inputs */
+  font-size: 1rem;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  color: var(--text-color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+/* Image defaults */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}

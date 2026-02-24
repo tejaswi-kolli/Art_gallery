@@ -1,0 +1,123 @@
+.payment-page-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.payment-wrapper {
+    background: var(--bg-primary);
+    width: 600px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+}
+
+.payment-wrapper h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.payment-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #888;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    font-weight: bold;
+}
+
+.method-section {
+    padding: 1rem 0;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.method-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.upi-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.upi-app {
+    padding: 1rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.upi-app.selected {
+    border-color: var(--accent-color);
+    background: #f0f7ff;
+    color: var(--accent-color);
+}
+
+.qr-section {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.qr-display {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.timer {
+    color: red;
+    font-weight: bold;
+}
+
+.card-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-block {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    padding: 12px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

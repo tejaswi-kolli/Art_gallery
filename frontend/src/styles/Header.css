@@ -1,0 +1,213 @@
+/* ... existing header styles ... */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.icon-link:hover {
+    background: #f0f0f0;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.dropbtn:hover {
+    background: #f0f0f0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    background-color: #fff;
+    min-width: 240px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    z-index: 1000;
+    border: 1px solid #e0e0e0;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-login,
+.btn-register {
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    /* Bolder text */
+    transition: all 0.3s;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-login {
+    background-color: #ffffff;
+    color: #4e1334;
+    /* Lighter Indigo */
+    border: 2px solid #4a0f33;
+}
+
+.btn-login:hover {
+    background-color: #711f3e;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(91, 14, 71, 0.3);
+}
+
+.btn-register {
+    background: #818cf8;
+    /* Indigo-400 (Lighter) */
+    color: white;
+    border: 2px solid #818cf8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-register:hover {
+    background: #6366f1;
+    border-color: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+}
+
+
+/* Show class toggled by React */
+.dropdown-content.show {
+    display: flex;
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Dropdown Arrow */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 13px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    transform: rotate(45deg);
+    border-left: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.dropdown-header {
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #666;
+    border-radius: 12px 12px 0 0;
+}
+
+.dropdown-header strong {
+    color: #333;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.dropdown-content a,
+.dropdown-content button {
+    color: #444;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.dropdown-content a:last-child,
+.dropdown-content button:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.dropdown-content a:hover,
+.dropdown-content button:hover {
+    background-color: #fce4ec;
+    /* Light pink tint */
+    color: var(--primary-color);
+}

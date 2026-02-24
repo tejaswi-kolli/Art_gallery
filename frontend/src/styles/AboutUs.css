@@ -1,0 +1,179 @@
+/* About Us Page Styling */
+.about-page {
+    padding: 3rem;
+    animation: fadeIn 0.8s ease-out;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F6F3 100%);
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Section */
+.about-hero {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: #fff;
+    margin-bottom: 4rem;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(145, 62, 77, 0.15) 0%, transparent 70%);
+}
+
+.about-hero h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.8;
+    max-width: 600px;
+    z-index: 1;
+}
+
+/* Mission Section */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-primary);
+    /* Wine underline */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Values Grid */
+.values-grid {
+    display: flex;
+    /* Flex for row layout */
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    padding: 3rem 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Match the image: First card has specific styling */
+.value-card:first-child {
+    border: 1px solid rgba(145, 62, 77, 0.3);
+    box-shadow: 0 10px 30px rgba(145, 62, 77, 0.1);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-color: rgba(145, 62, 77, 0.3);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: #913E4D;
+    margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.value-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Call to Action */
+.cta-container {
+    background: linear-gradient(135deg, rgba(145, 62, 77, 0.08), rgba(248, 246, 243, 1));
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(145, 62, 77, 0.15);
+}
+
+.cta-container h2 {
+    color: #1a1a1a !important;
+}
+
+.cta-container p {
+    color: #555;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
