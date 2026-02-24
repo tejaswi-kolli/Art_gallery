@@ -73,11 +73,11 @@ This structured flow ensures separation of concerns and maintainability.
 - JavaScript  
 
 ### ⚙️ Backend
--  
+-  Node.js
 - REST-style routing  
 
 ### 🗄️ Data Handling
-- 
+- MongoDB
 
 ### 🔁 Version Control
 - Git  
