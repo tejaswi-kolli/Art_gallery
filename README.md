@@ -1,143 +1,176 @@
-Art Gallery Web Application
-Overview
+# 🎨 Art Gallery Web Application  
 
-Art Gallery is a full-stack web application designed to showcase and manage a collection of artworks. The application allows users to browse art pieces, view detailed information, and interact with the gallery through a structured frontend and backend architecture.
+> A full-stack web application designed to manage and display artwork collections using a structured client-server architecture.
 
-This project demonstrates full-stack development skills including backend logic handling, frontend integration, structured routing, and data management.
+---
 
-Problem Statement
+## 📌 Overview  
 
-Traditional static websites do not provide scalable or dynamic ways to manage art collections. This project was developed to:
+The **Art Gallery Web Application** is a full-stack project built to demonstrate backend–frontend integration, modular architecture, and structured data handling.
 
-Provide a dynamic and interactive platform for displaying artwork
+This project separates concerns between presentation and business logic layers, enabling scalable and maintainable development.
 
-Separate frontend and backend responsibilities
+It showcases:
 
-Implement structured data flow between client and server
+- Client-server communication  
+- REST-style routing  
+- Modular backend structure  
+- Organized frontend components  
+- Version-controlled workflow using Git  
 
-Demonstrate modular and maintainable code architecture
+---
 
-Architecture Overview
+## 🎯 Problem Statement  
 
-The project follows a client-server model:
+Static gallery websites lack scalability and dynamic data handling.  
 
-Frontend
+This project was developed to:
 
-Responsible for UI rendering and user interaction
+- Build a dynamic platform for displaying art collections  
+- Separate frontend UI from backend logic  
+- Enable structured data flow between client and server  
+- Demonstrate maintainable full-stack architecture  
 
-Sends requests to backend APIs
+---
 
-Displays dynamic content received from the server
+## 🏗️ System Architecture  
 
-Backend
+The application follows a **Client–Server Model**.
 
-Handles business logic and request processing
+### 🔹 Frontend Layer
+- Handles UI rendering and user interaction  
+- Sends requests to backend endpoints  
+- Dynamically updates content  
 
-Manages data storage and retrieval
+### 🔹 Backend Layer
+- Processes incoming requests  
+- Implements routing logic  
+- Handles business logic and data management  
+- Performs validation before responding  
 
-Implements routing and server-side validation
+### 🔄 Data Flow
+User
+->
+Frontend (UI)
+->
+Backend API
+->
+Data Source
+->
+Backend Response
+->
+Frontend Rendering
 
-Data Flow:
+This structured flow ensures separation of concerns and maintainability.
 
-User → Frontend → Backend API → Database / Data Source → Backend → Frontend → User Interface
+---
 
-Tech Stack
+## 🛠️ Tech Stack  
 
-Frontend:
+### 💻 Frontend
+- HTML  
+- CSS  
+- JavaScript  
 
-HTML
+### ⚙️ Backend
+-  
+- REST-style routing  
 
-CSS
+### 🗄️ Data Handling
+- 
 
-JavaScript (if applicable)
+### 🔁 Version Control
+- Git  
+- GitHub  
 
-Backend:
+---
 
-(Specify your backend tech: Node.js / Python / Express / Flask — update this correctly)
+## ✨ Features  
 
-REST-style routing
+- 📂 Dynamic display of artwork collections  
+- 🔎 Structured request handling  
+- 🔗 Modular backend routing  
+- 🧩 Clear separation of frontend and backend  
+- 📦 Organized folder structure  
+- 🔄 Git-based version control  
 
-Database / Data Handling:
+---
 
-(Specify if using MongoDB / MySQL / JSON / etc.)
+## 🧠 Engineering Highlights  
 
-Version Control:
+- Designed modular backend components for maintainability  
+- Implemented structured routing to manage multiple request types  
+- Maintained clean separation between UI and business logic  
+- Applied validation mechanisms for request handling  
+- Structured project for scalability and clarity  
 
-Git
+---
 
-GitHub
+## 🚀 How to Run the Project  
 
-Features
+### 1️⃣ Clone the Repository  
 
-Dynamic rendering of artwork collections
-
-Modular backend routing
-
-Structured API request handling
-
-Separation of concerns between frontend and backend
-
-Clean project folder structure for scalability
-
-Version-controlled development workflow
-
-Engineering Highlights
-
-Designed modular backend architecture to improve maintainability
-
-Implemented structured routing for handling multiple request types
-
-Maintained clean separation between presentation layer and logic layer
-
-Followed Git-based version control practices
-
-Organized codebase into frontend and backend directories for clarity and scalability
-
-How to Run the Project
-
-Clone the repository
-
+```bash
 git clone https://github.com/tejaswi-kolli/Art_gallery.git
-
-Navigate to backend folder
-
+2️⃣ Navigate to Backend
 cd backend
+3️⃣ Install Dependencies
+npm install
+# OR
+pip install -r requirements.txt
+4️⃣ Start the Server
+node app.js
+# OR
+python app.py
+5️⃣ Run Frontend
 
-Install dependencies
+Open index.html in your browser
+OR use a local development server.
 
-(npm install OR pip install -r requirements.txt — adjust correctly)
+📈 Future Enhancements
 
-Start the server
+🔐 Add authentication & role-based access control
 
-(node app.js OR python app.py — adjust correctly)
+☁️ Deploy to a cloud platform (AWS / Render / etc.)
 
-Open frontend in browser
+🐳 Add Docker containerization
 
-Navigate to the frontend directory and open index.html
-OR run using a local development server.
+🧪 Implement backend unit testing
 
-Future Improvements
+🔍 Add search and pagination optimization
 
-Add authentication and role-based access
-
-Deploy to cloud platform (AWS / Render / Railway)
-
-Add containerization using Docker
-
-Implement unit testing for backend routes
-
-Add pagination and search optimization
-
-Learning Outcomes
+🎓 Learning Outcomes
 
 Through this project, I strengthened my understanding of:
 
 Full-stack development principles
 
-Client-server architecture
+Client–server architecture
 
-REST API design fundamentals
+REST API fundamentals
 
-Modular code organization
+Modular code design
 
-Structured version control workflows
+Structured Git workflows
+
+Scalable project organization
+
+📎 Repository Structure
+Art_gallery/
+│
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
+│
+├── backend/
+│   ├── app.js (or app.py)
+│   └── routes/
+│
+└── README.md
+👩‍💻 Author
+
+Kolli Tejaswi
+GitHub: https://github.com/tejaswi-kolli
+
+LinkedIn: https://www.linkedin.com/in/kolli-tejaswi-726283253
